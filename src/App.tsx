@@ -1,34 +1,23 @@
-import { gql , useQuery } from "@apollo/client";
+import Header from "./components/Header";
+import Lesson from "./components/Lesson";
+import SideBar from "./components/SideBar";
+import Video from "./components/Video";
 
 
-const GET_LESSONS_QUERY = gql`
-  query {
-    lessons {
-      id
-      title
-    }
-  }
-`;
-
-interface lesson{
-  id: string,
-  title: string
-}
 
 function App() {
-   const {data} = useQuery<{ lessons: lesson[]}>(GET_LESSONS_QUERY)
-   console.log(data);
+ 
    
   return (
-    <div className="App">
-     <ul>
-      {data?.lessons.map(lesson => {
-        return <li key={lesson.id}>{lesson.title}</li>
-      })}
-     </ul>
-
+   
+    <div>
+      <Header/>
+      <SideBar/>
+      <Video/>
+      <Lesson/>
+      
     </div>
-  );
+  )
 }
 
 export default App;
