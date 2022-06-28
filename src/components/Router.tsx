@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
+import Event from "../pages/Event";
 export function Router() {
   return(
     <Routes>
@@ -7,7 +8,7 @@ export function Router() {
         />
 
 <Route path="/event"
-        element={<h1>Event</h1>}
+        element={<Event/>}
         />
      </Routes>
   )
