@@ -1,15 +1,12 @@
 import { Routes, Route, Link } from "react-router-dom";
 import Event from "../pages/Event";
 export function Router() {
-  return(
+  return (
     <Routes>
-        <Route path="/"
-        element={<h1>Home</h1>}
-        />
+      <Route path="/" element={<h1>Home</h1>} />
 
-<Route path="/event"
-        element={<Event/>}
-        />
-     </Routes>
-  )
+      <Route path="/event" element={<Event />} />
+      <Route path="/event/lesson/:slug" element={<Event />} />
+    </Routes>
+  );
 }
