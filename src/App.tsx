@@ -1,4 +1,4 @@
-import Event from "./pages/Event";
+import { Router } from "./components/Router";
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
    
     <div>
-      <Event/>
+      <Router/>
       
     </div>
   )
